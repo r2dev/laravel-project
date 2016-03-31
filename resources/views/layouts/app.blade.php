@@ -48,7 +48,7 @@
                 <!-- Left Side Of Navbar -->
                 @if (!Auth::guest())
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/cart') }}">Home</a></li>
+                    <li><a href="{{ url('/cart') }}">Cart</a></li>
                 </ul>
                 @endif
 

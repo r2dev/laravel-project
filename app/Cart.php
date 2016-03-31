@@ -14,7 +14,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cart extends Model
 {
-    //
+
+    protected $fillable = ['user_id'];
     public function user()
     {
         return $this->belongsTo('App\User');
@@ -25,8 +26,4 @@ class Cart extends Model
         return $this->belongsToMany('App\Product')->withPivot('amount', 'created_at');
     }
 
-    public function addProduct(Product $product)
-    {
-        return $this->push($product);
-    }
 }
